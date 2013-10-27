@@ -1,0 +1,53 @@
+Rápidamente:
+
+* Me gusta la diferenciación entre actuadores analógicos y binarios.
+Lo del sensor también está bien.
+* No os compliquéis ahora haciendo más subclases de actuadores o
+sensores. Más tarde os daréis cuanta de las necesidades particulares.
+Dejadlas fuera de momento. No me interesan.
+* No me hagáis clases con la casa y las dependencias. Eso se escribirá
+en un fichero de instalación de texto que asociará nodos con
+dependencias. Debe estar formulado de tal manera que las dependencias
+sean genéricas. Lo importante es lo que hay instalado dentro de ellas.
+
+Hoy no tengo mucho tiempo pero mi visión a grandes rasgos es la siguiente:
+
+* Clase Casa
+      vector<nodo_t> nodos
+      instalacion_t instalacion
+      vector<configuracionUsuario_t> configuracionUsuario (esto
+dejarlo para más adelante)
+
+* Class instalación_t (trabajará sobre un fichero de texto donde pej.
+cada linea asocia un ID con un tipoNodo  y su situación:  3,
+actuadorLuz, baño1)
+     añadirNodo(tipo_tipo, dependencia_t dependencia)
+     vector<int> obtenerNodosDeUnTipo(tipo_t tipo) --> donde tipo
+sería sensorLuz, actuadorLuz, etc
+     obtenerNodosEnUnaHabitación(dependencia_t dependencia)
+     ...
+
+* Class nodo_t (abstract)
+     int ID
+     fakeCommunicator
+     tcpipCommunicator (por si se utiliza)
+     ...
+* Class sensor_t: nodo_t
+     ...
+* Class actuador_t: nodo_t
+     ...
+* Class controlador_t: nodo_t
+     setActuator(actuador_t, valor);
+     regular(dependencia_t dependencia, variable_t variable, valor)
+     ...
+
+* Class communicator_t (abstract)
+     send
+     receive
+* Class fakeCommunicator: communicator
+* Class tcpipCommunicator: communicator (en el caso de que se implemente)
+
+Detallad el contenido de esto de momento y no os compliquéis
+demasiado. Cuando esto funcione. Un diagrama de clases bien hecho debe
+detallar el funciona miento de esto en detalle (aunque solo de las
+funciones principales)
