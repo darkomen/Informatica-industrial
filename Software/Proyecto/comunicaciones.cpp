@@ -7,12 +7,12 @@ using namespace std;
 comunicaciones::comunicaciones()
 {
     this->_id = 3;
-    this->_mensaje = "jojo";
+    this->_mensaje << "jojo";
 }
-comunicaciones::comunicaciones(int id,string mensaje)
+comunicaciones::comunicaciones(int id,stringstream mensaje)
 {
     this->_id = id;
-    this->_mensaje = mensaje;
+    this->_mensaje << mensaje;
 }
 /*
   Destructor de la clase
@@ -27,13 +27,14 @@ comunicaciones::~comunicaciones(){
 
 void comunicaciones::createMessage(int id, int id2 ,string accion, float valor){
     //this->_mensaje = string(id + "," + id2 + "," + accion + "," + valor + ";") ;
-    temp << id << "," << id2 << "," << accion<< ","<< valor << ";";
-    this->_mensaje = temp.str() ;
+    _mensaje.str("");
+    _mensaje << id << "," << id2 << "," << accion<< ","<< valor << ";";
+    this->_mensaje.str() ;
 }
 
 void comunicaciones::mostrar(){
     cout << "nodo con id: ";
     cout << this->_id << endl;
     cout << "nodo con mensaje: ";
-    cout << this->_mensaje << endl;
+    cout << this->_mensaje.str() << endl;
 }
