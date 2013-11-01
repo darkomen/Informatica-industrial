@@ -7,7 +7,7 @@ using namespace std;
 comunicaciones::comunicaciones()
 {
     this->_id = 3;
-    this->_mensaje << "jojo";
+    this->_mensaje.str("");
 }
 comunicaciones::comunicaciones(int id,stringstream mensaje)
 {
@@ -26,7 +26,6 @@ comunicaciones::~comunicaciones(){
 */
 
 void comunicaciones::createMessage(int id, int id2 ,string accion, float valor){
-    //this->_mensaje = string(id + "," + id2 + "," + accion + "," + valor + ";") ;
     _mensaje.str("");
     _mensaje << id << "," << id2 << "," << accion<< ","<< valor << ";";
     this->_mensaje.str() ;
