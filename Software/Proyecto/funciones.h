@@ -21,4 +21,5 @@ void configuracion();
   http://stackoverflow.com/questions/8116808/read-integers-from-a-text-file-with-c-ifstream/8116843#8116843
 */
 int generar_id();
+void leer();
 #endif // FUNCIONES_H

@@ -115,3 +115,23 @@ int generar_id(){
 
 }
 
+void leer(){
+    const char delimitador =','; //caracter que separa las distintas ordenes.
+    const char fin = ';';        //caracter que termina la linea.
+    string primer;
+    //Abrimos el fichero en modolectura e introducimos todos los números en un vector
+    {
+    ifstream file("./config/sistema/mensaje.txt");
+    string line;
+    while(getline(file, line)){//leemos cada una de las lineas del fichero
+        //Parseamos cada linea para ir comprobando los comandos
+        //getline(line, primer, ',');
+        primer = line.substr(0, line.find(delimitador));
+        cout << primer;
+    }
+    file.close();
+    }
+
+
+
+}
