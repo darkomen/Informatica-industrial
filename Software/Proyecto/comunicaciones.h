@@ -26,7 +26,6 @@ private:
     //Atributos
     int _id;
     stringstream _mensaje;
-    stringstream temp;
 };
 
 #endif // COMUNICACIONES_H

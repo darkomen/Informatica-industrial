@@ -1,12 +1,13 @@
 #include "comunicaciones.h"
 #include <iostream>
+#include <funciones.h>
 using namespace std;
 /*
   Constructores de la clase
   */
 comunicaciones::comunicaciones()
 {
-    this->_id = 3;
+    this->_id = generar_id();
     this->_mensaje.str("");
 }
 comunicaciones::comunicaciones(int id,stringstream mensaje)

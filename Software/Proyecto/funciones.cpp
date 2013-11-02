@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <sstream>
+#include <string>
 
 using namespace std;
 bool file_exists(const std::string& s) {
@@ -43,3 +46,72 @@ void configuracion(){
     }
 
 }
+
+/*
+int generar_id(){
+    int id;
+    char cadena[10];
+    //generamos el número aleatorio del 1 al 100
+    srand(time(NULL));
+    id=1+rand()%(101-1);
+
+    //Abrimos el fichero en modo lectura
+    ifstream idfile("./config/sistema/id.txt");
+    while(!idfile.eof()){
+        idfile.getline(cadena,10);
+
+        if (atoi(cadena)==10){
+            cout << cadena;
+        }
+
+    }
+    idfile.close();
+
+}
+*/
+
+int generar_id(){
+    vector<int> v;
+    int id;
+
+    //Abrimos el fichero en modo lectura e introducimos todos los números en un vector
+    {
+    ifstream file("./config/sistema/id.txt");
+    string line;
+
+    while(getline(file, line))
+    {
+        stringstream ss(line);
+        int i;
+
+        while( ss >> i )
+           v.push_back(i);
+    }
+    file.close();
+    }
+
+    //Generamos el numero aleatorio del ID
+    srand(time(NULL));
+    id=1+rand()%(101-1);
+
+    //Lo comprobamos con todos los ID del fichero, si el número es igual que alguno,
+    //se vuelve a generar
+    for(int j=0;j<v.size();j++){
+        if(id==v[j]){
+            id=1+rand()%(101-1);
+            j=0;
+        }
+    }
+
+    //Guardamos el Id en el fichero de configuración.
+    {
+    ofstream file("./config/sistema/id.txt", ios::app);
+    file << id<< endl;
+    file.close();
+    }
+
+    //devolvemos el ID;
+    return id;
+
+}
+
