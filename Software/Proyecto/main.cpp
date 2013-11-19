@@ -6,13 +6,18 @@
 using namespace std;
 
 int main(int argc, char *argv[]){
-/*
     configuracion();
+
     comunicaciones comuni;
-    comuni.createMessage(1,2,"abrir",100);
-    comuni.mostrar();
-    */
-    leer();
+
+
+
+
+
+
+
+    comuni.createMessage(comuni.mostrar_id(),3,"cerral",100);
+
     return 0;
 }
 

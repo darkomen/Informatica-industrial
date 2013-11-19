@@ -1,6 +1,8 @@
 #include "comunicaciones.h"
 #include <iostream>
+#include <fstream>
 #include <funciones.h>
+#include <sstream>
 using namespace std;
 /*
   Constructores de la clase
@@ -27,14 +29,23 @@ comunicaciones::~comunicaciones(){
 */
 
 void comunicaciones::createMessage(int id, int id2 ,string accion, float valor){
-    _mensaje.str("");
-    _mensaje << id << "," << id2 << "," << accion<< ","<< valor << ";";
-    this->_mensaje.str() ;
+    this->_mensaje.str("");
+    this->_mensaje << id << "," << id2 << "," << accion<< ","<< valor << ";";
+    this->_mensaje.str();
+
+    ofstream mensaje("./config/sistema/mensaje.txt",std::fstream::app);
+
+    mensaje << this->_mensaje.str() << endl;
+
+    mensaje.close();
+
+
 }
 
-void comunicaciones::mostrar(){
-    cout << "nodo con id: ";
-    cout << this->_id << endl;
-    cout << "nodo con mensaje: ";
-    cout << this->_mensaje.str() << endl;
+int comunicaciones::mostrar_id(){
+    return this->_id ;
+}
+string comunicaciones::mostrar_mensaje(){
+
+    return this->_mensaje.str();
 }

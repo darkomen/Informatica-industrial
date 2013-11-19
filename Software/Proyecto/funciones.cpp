@@ -6,27 +6,20 @@
 #include <string>
 
 using namespace std;
-bool file_exists(const std::string& s) {
-    //Función para comprobar
-    if (access(s.c_str(),0) == 0){
-        //cout << "carpeta existe"<< endl;
-        return 0;
-    }
-        else{
 
-        //cout << "carpeta no existe"<<endl;
-        return 1;
-    }
-
-}
 void configuracion(){
 
     cout << "[+] Generando ficheros del sistema......";
-    switch(file_exists("./config")){
-    case 0:
+
+    /** comprobamos si el fichero ./config está generado o no. */
+    ifstream file("./config",ios::in | ios::binary);
+    /** Si el fichero existe, no me genera los ficheros del sistema, no es la primera vez que se ejecuta*/
+    if (file.good()){
         cout << "....[OK]\n[+] Ficheros existentes.\n";
-        break;
-    case 1:
+    }
+    /** Si no está creado, es la primera vez que se ejecuta. */
+    else {
+
         system("mkdir config");
         cout << "\n   ./config\n";
         system("mkdir ./config/casa");
@@ -39,56 +32,30 @@ void configuracion(){
         cout << "       ./sistema\n";
         system("touch ./config/sistema/id.txt");
         cout << "           ./sistema/id.txt\n";
-
-        break;
-    default:
-        break;
+        system("touch ./config/sistema/mensaje.txt");
+        cout << "           ./sistema/mensaje.txt\n";
     }
-
 }
-
-/*
-int generar_id(){
-    int id;
-    char cadena[10];
-    //generamos el número aleatorio del 1 al 100
-    srand(time(NULL));
-    id=1+rand()%(101-1);
-
-    //Abrimos el fichero en modo lectura
-    ifstream idfile("./config/sistema/id.txt");
-    while(!idfile.eof()){
-        idfile.getline(cadena,10);
-
-        if (atoi(cadena)==10){
-            cout << cadena;
-        }
-
-    }
-    idfile.close();
-
-}
-*/
 
 int generar_id(){
     vector<int> v;
     int id;
 
     //Abrimos el fichero en modo lectura e introducimos todos los números en un vector
-    {
-    ifstream file("./config/sistema/id.txt");
-    string line;
 
-    while(getline(file, line))
-    {
-        stringstream ss(line);
-        int i;
+    ifstream fichero("./config/sistema/id.txt");
+    string linea;
 
-        while( ss >> i )
-           v.push_back(i);
-    }
-    file.close();
-    }
+    do{
+   // v.push_back(file.getline());
+        fichero.getline(linea);
+
+        //v.push_back(istringstream(linea));
+
+
+    }while (!fichero.eof());
+
+    fichero.close();
 
     //Generamos el numero aleatorio del ID
     srand(time(NULL));

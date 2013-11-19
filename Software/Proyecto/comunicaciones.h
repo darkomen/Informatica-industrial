@@ -20,8 +20,12 @@ public:
     //métodos.
     //concatenar un int en un string
     //http://www.cplusplus.com/forum/beginner/3405/#msg14120
+    //http://www.cplusplus.com/reference/fstream/fstream/open/
     void createMessage(int id,int id1,string accion,float valor);
-    void mostrar();
+    int mostrar_id();
+    string mostrar_mensaje();
+
+
 private:
     //Atributos
     int _id;
