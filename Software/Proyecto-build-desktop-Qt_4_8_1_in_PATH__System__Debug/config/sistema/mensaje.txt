@@ -1,2 +1,4 @@
 24,3,cerral,100;
 60,3,cerral,100;
+6,3,cerral,100;
+6,3,cerral,100;
