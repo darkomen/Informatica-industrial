@@ -1,35 +1,34 @@
-#ifndef COMUNICACIONES_H
-#define COMUNICACIONES_H
+#ifndef Comunicaciones_H
+#define Comunicaciones_H
 //includes
 #include <string>
 #include <sstream>
 
 using namespace std;
 
-class comunicaciones
+class Comunicaciones
     {
 public:
-    //constructores.
-    comunicaciones(); //con parámetros por defecto
-    comunicaciones(int id, stringstream mensaje);
-    comunicaciones(const comunicaciones &c);
+    /**
+    Constructor de la clase genera la Id de forma aleatorio y con un mensaje vacio
+    */
+    Comunicaciones();
 
-    //destructor.
-    ~comunicaciones();
+    /**
+    Destructor de la clase
+    */
+    ~Comunicaciones();
 
-    //métodos.
-    //concatenar un int en un string
-    //http://www.cplusplus.com/forum/beginner/3405/#msg14120
-    //http://www.cplusplus.com/reference/fstream/fstream/open/
+    /**
+    métodos.
+    */
     void createMessage(int id,int id1,string accion,float valor);
-    int mostrar_id();
-    string mostrar_mensaje();
-
-
-private:
-    //Atributos
-    int _id;
-    stringstream _mensaje;
+    int mostrarId();
+protected:
+    /**
+    Atributos */
+    int _id; /** Almacenamos el id del objeto */
+    stringstream _mensaje; /** Almacenamos el mensaje del objeto */
 };
 
-#endif // COMUNICACIONES_H
+#endif // Comunicaciones_H

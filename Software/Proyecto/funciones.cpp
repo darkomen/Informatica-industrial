@@ -8,7 +8,13 @@
 using namespace std;
 
 void configuracion(){
-
+    /**
+      Genera los id de los nodos, comprueba si el ID ya está generado y lo introduce en un fichero.
+      Bibliografia:
+      - http://c.conclase.net/curso/?cap=039
+      - http://codigoc.org/354-obtener-numeros-aleatorios-en-c-rand-srand
+      - http://stackoverflow.com/questions/8116808/read-integers-from-a-text-file-with-c-ifstream/8116843#8116843
+    */
     cout << "[+] Generando ficheros del sistema......";
 
     /** comprobamos si el fichero ./config está generado o no. */
@@ -37,6 +43,9 @@ void configuracion(){
     }
 }
 
+
+
+/** HACER STATIC DONDE SEA. */
 int generar_id(){
     vector<int> v; /** Vector de tipo entero */
     int id;        /** variable donde se almacena el ID generado */
@@ -83,22 +92,19 @@ int generar_id(){
 }
 
 void leer(){
-    const char delimitador =','; //caracter que separa las distintas ordenes.
-    const char fin = ';';        //caracter que termina la linea.
-    string primer;
     //Abrimos el fichero en modolectura e introducimos todos los números en un vector
-    {
     ifstream file("./config/sistema/mensaje.txt");
     string line;
+
     while(getline(file, line)){//leemos cada una de las lineas del fichero
         //Parseamos cada linea para ir comprobando los comandos
-        //getline(line, primer, ',');
-        primer = line.substr(0, line.find(delimitador));
-        cout << primer;
+        stringstream ss(line); //Convertimos la linea en un tipo stringstream
+        double id1,id2,valor;  //generamos las variables donde introduciremos los comandos
+        string accion;
+        ss >> id1 >> id2 >> accion >> valor; //Volcamos los distintos parametros de la linea a las variables
+        if (id1 == 80) { cout << accion << endl;} //Comparamos las variables con lo que queramos.
     }
     file.close();
-    }
-
-
-
 }
+
+
