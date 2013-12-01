@@ -1,11 +1,13 @@
 #include "nodocentral.h"
 #include <iostream>
 using namespace std;
-NodoCentral::NodoCentral()
+
+void NodoCentral::addNodo(Nodo n)
 {
+
 }
 
-NodoCentral::~NodoCentral()
+void NodoCentral::showNodo()
 {
-    cout << "Destructor de la clase NodoCentral" << endl;
+
 }

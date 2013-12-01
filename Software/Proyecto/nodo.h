@@ -3,9 +3,8 @@
 #include "nodocentral.h"
 #include "ficheros.h"
 #include<funciones.h>
-#include<vector>
 
-class Nodo : public NodoCentral
+class Nodo
 {
 public:
     Nodo();   /** Constructor de la clase*/

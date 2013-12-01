@@ -1,7 +1,7 @@
 #include "nodo.h"
 #include <iostream>
 using namespace std;
-Nodo::Nodo() : NodoCentral()
+Nodo::Nodo()
 {
     _id = generar_id();
     //_comunicacion = Ficheros;
