@@ -1,11 +1,10 @@
 #include <iostream>
 #include <funciones.h>
 #include <comunicaciones.h>
-#include <nodocentral.h>
 #include <nodo.h>
+#include <nodocentral.h>
 #include <actuador.h>
-#include <actuadordiscreto.h>
-#include <actuadoranalogico.h>
+#include <sensor.h>
 #include <ficheros.h>
 #include <sstream>
 
@@ -16,20 +15,14 @@ int main(int argc, char *argv[]){
     /** Instanciación de objetos*/
     cout << "**********INICIO DEL PROGRAMA**********" << endl;
     NodoCentral ssc;
-    ActuadorDiscreto bombilla;
-    ActuadorAnalogico valvula;
-    /** Programa */
-    cout << "El estado actual de la bombilla es: ";
-    cout << bombilla.getValor() <<endl ;
-    bombilla.setValor(true);
-    cout << "El estado actual de la bombilla es: ";
-    cout << bombilla.getValor() <<endl ;
-    cout << "El estado actual de la valvula es: ";
-    cout << valvula.getValor() <<endl ;
-    valvula.setValor(50.0);
-    cout << "El estado actual de la valvula es: ";
-    cout << valvula.getValor() <<endl ;
-    cout << "**********FIN DEL PROGRAMA**********" << endl;
+    //Sensor<float> temperatura;
+    Actuador<bool> puerta;
+    //Actuador<float> valvula;
+    puerta.setValor(true);
+    cout << puerta.getValor() << endl;
+
+
+
     return 0;
 }
 

@@ -20,7 +20,7 @@ int Ficheros::mostrarId()
 
 void Ficheros::sendMessage(){
     ofstream mensaje("./config/sistema/mensaje.txt",std::fstream::app); /** Abrimos el fichero de mensajes en modo append, para añadir las lineasal final del fichero */
-    mensaje << this->_mensaje.str() << endl; /** Volcamos el mensaje del objeto al fichero */
+    mensaje << this->_mensaje->str() << endl; /** Volcamos el mensaje del objeto al fichero */
     mensaje.close();             /** Cerramos el fichero */
 }
 

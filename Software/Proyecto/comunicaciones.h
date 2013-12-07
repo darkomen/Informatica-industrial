@@ -1,18 +1,19 @@
-#ifndef Comunicaciones_H
-#define Comunicaciones_H
+#ifndef COMUNICACIONES_H
+#define COMUNICACIONES_H
+
 //includes
-#include <string>
+//#include <string>
 #include <sstream>
 
 using namespace std;
 
 class Comunicaciones
-    {
+{
 public:
     /**
     Constructor de la clase genera la Id de forma aleatorio y con un mensaje vacio
     */
-    Comunicaciones();
+    Comunicaciones(int ID);
 
     /**
     Destructor de la clase
@@ -28,7 +29,7 @@ protected:
     /**
     Atributos */
     int _id; /** Almacenamos el id del objeto */
-    stringstream _mensaje; /** Almacenamos el mensaje del objeto */
+    stringstream *_mensaje; /** Almacenamos el mensaje del objeto */
 };
 
 #endif // Comunicaciones_H

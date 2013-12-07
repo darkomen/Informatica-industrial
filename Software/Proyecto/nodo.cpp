@@ -3,8 +3,12 @@
 using namespace std;
 Nodo::Nodo()
 {
-    _id = generar_id();
-    //_comunicacion = Ficheros;
+
+}
+Nodo::Nodo(int ID)
+{
+    ///_id = generar_id();
+    _id = ID;
 }
 Nodo::~Nodo()
 {
@@ -15,6 +19,6 @@ cout << "Destructor de la clase Nodo" << endl;
 
 int Nodo::mostrarId()
 {
-    return this->_id;
+    return _id;
 }
 

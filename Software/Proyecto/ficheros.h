@@ -1,7 +1,7 @@
 #ifndef FICHEROS_H
 #define FICHEROS_H
 
-#include <comunicaciones.h>
+#include "comunicaciones.h"
 
 class Ficheros: public Comunicaciones
 {
