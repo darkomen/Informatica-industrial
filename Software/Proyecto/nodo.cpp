@@ -3,22 +3,20 @@
 using namespace std;
 Nodo::Nodo()
 {
-
-}
-Nodo::Nodo(int ID)
-{
-    ///_id = generar_id();
-    _id = ID;
+    /** Constructor de la clase Nodo.*/
+    _id = generar_id();
+    //_comunicacion = Ficheros;
 }
 Nodo::~Nodo()
 {
-cout << "Destructor de la clase Nodo" << endl;
+    //cout << "Destructor de la clase Nodo" << endl;
 }
 
 
 
 int Nodo::mostrarId()
 {
-    return _id;
+        /** Método mostrarId() Devolvemos el ID del nodo*/
+    return this->_id;
 }
 

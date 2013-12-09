@@ -6,7 +6,12 @@ SOURCES += \
     nodocentral.cpp \
     nodo.cpp \
     actuador.cpp \
-    sensor.cpp
+    sensor.cpp \
+    actuadordiscreto.cpp \
+    actuadoranalogico.cpp \
+    sensoranalogico.cpp \
+    sensordiscreto.cpp \
+    regulador.cpp
 
 HEADERS += \
     comunicaciones.h \
@@ -15,4 +20,9 @@ HEADERS += \
     nodocentral.h \
     nodo.h \
     actuador.h \
-    sensor.h
+    sensor.h \
+    actuadordiscreto.h \
+    actuadoranalogico.h \
+    sensoranalogico.h \
+    sensordiscreto.h \
+    regulador.h

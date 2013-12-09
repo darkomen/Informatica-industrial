@@ -1,19 +1,18 @@
-#ifndef COMUNICACIONES_H
-#define COMUNICACIONES_H
-
+#ifndef Comunicaciones_H
+#define Comunicaciones_H
 //includes
-//#include <string>
+#include <string>
 #include <sstream>
 
 using namespace std;
 
 class Comunicaciones
-{
+    {
 public:
     /**
     Constructor de la clase genera la Id de forma aleatorio y con un mensaje vacio
     */
-    Comunicaciones(int ID);
+    Comunicaciones();
 
     /**
     Destructor de la clase
@@ -23,8 +22,8 @@ public:
     /**
     métodos.
     */
-    void createMessage(int id,int id1,string accion,float valor);
-    int mostrarId();
+    void createMessage(int id,int id1,string accion,float valor); /** Creamos el mensaje de comunicaciones*/
+    int mostrarId(); /** Muestra el ID del nodo comunicaciones */
 protected:
     /**
     Atributos */

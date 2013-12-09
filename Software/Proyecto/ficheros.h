@@ -1,7 +1,7 @@
 #ifndef FICHEROS_H
 #define FICHEROS_H
 
-#include "comunicaciones.h"
+#include <comunicaciones.h>
 
 class Ficheros: public Comunicaciones
 {
@@ -10,9 +10,9 @@ public:
     Ficheros();
     ~Ficheros();
     /** Métodos */
-    void sendMessage();
-    void receiveMessage(); /** 28-nov-2013 PENDIENTE */
-    int mostrarId();
+    void sendMessage();     /** Escribimos el mensaje en el fichero de texto*/
+    void receiveMessage(); /** Leemos el mensaje en el fichero de texto */
+
 };
 
 #endif // FICHEROS_H

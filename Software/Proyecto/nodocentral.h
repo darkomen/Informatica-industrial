@@ -1,9 +1,9 @@
 #ifndef NODOCENTRAL_H
 #define NODOCENTRAL_H
-
-#include "nodo.h"
-#include "actuador.h"
-#include "sensor.h"
+#include <nodo.h>
+#include <actuadoranalogico.h>
+#include <sensoranalogico.h>
+#include <regulador.h>
 #include <vector>
 
 #include <iostream>
@@ -12,22 +12,14 @@ using namespace std;
 class NodoCentral
 {
 public:
-    NodoCentral();
-    //void addActuador(Actuador<bool> a);
-    void showNodo();
-    void update(); /** Método para actualizar los actuadores con los valores del sensor.*/
-    int generar_id();
+    //void addNodo(const ActuadorAnalogico actAnalog);
+    void addActAnalog();    /** Añadimos un actuador analogico*/
+    void addSensor();       /** Añadimos un sensor */
+    void addRegulador(int index,double setpoint,float p); /** Añadimos un regulador*/
 public:
-    //vector<Nodo> _Vnodos;
-    //vector<Actuador<bool> > _Vactuadores;
-    //vector<Actuador> Vactuadores;
-    //vector<(Sensor<bool>)> Vsensores;
-
-    /**
-      Un actuador y un sensor pueden compartir ID, pero actuadores y sensores, deberan tener distintos nodos.
-      De este modo se puede acceder al nodo por la posición del vector.
-     */
-
+    vector<ActuadorAnalogico> _actAnalog; /** Vector con los actuadores analogicos de la casa*/
+    vector<SensorAnalogico> _sensAnalog;  /** Vector con los sensores analogicos de la casa */
+    vector<Regulador> _regulador;         /** Vector con los reguladores de la casa */
 };
 
 #endif // NODOCENTRAL_H

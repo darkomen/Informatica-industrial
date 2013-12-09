@@ -5,29 +5,26 @@
 using namespace std;
 Ficheros::Ficheros() : Comunicaciones()
 {
-    /** Creamos el objeto usando el constructor de la clase Comunicaciones */
+     /** Constructor de ficheros2. LLamamos al constructor Comunicaciones() para herencia*/
 }
 Ficheros::~Ficheros()
 {
-    cout << "Destructor de la clase Ficheros" << endl;
+    //cout << "Destructor de la clase Ficheros" << endl;
 }
 
 
-int Ficheros::mostrarId()
+
+void Ficheros::sendMessage()
 {
-    return this->_id;
-}
-
-void Ficheros::sendMessage(){
-    ofstream mensaje("./config/sistema/mensaje.txt",std::fstream::app); /** Abrimos el fichero de mensajes en modo append, para añadir las lineasal final del fichero */
+    /** Método sendMessage() Escribe en un fichero de texto el mensaje escrito por el nodo*/
+    ofstream mensaje("./config/sistema/mensaje.txt",ios::app); /** Abrimos el fichero de mensajes en modo append,
+                                                                        para añadir las lineas al final del fichero */
     mensaje << this->_mensaje->str() << endl; /** Volcamos el mensaje del objeto al fichero */
-    mensaje.close();             /** Cerramos el fichero */
+    mensaje.close();                          /** Cerramos el fichero */
 }
 
 void Ficheros::receiveMessage(){
-    /**
-      Método para leer el mensaje del fichero de mensajes.
-      */
+    /** Método receiveMessage() Lee de un fichero de texto el mensaje para los nodos */
     ifstream file("./config/sistema/mensaje.txt"); /** Abrimos el fichero en modolectura e introducimos todos los números en un vector */
     string line; /** variable donde almacenaramos las lineas del fichero. */
 
@@ -39,6 +36,6 @@ void Ficheros::receiveMessage(){
         ss >> id1 >> id2 >> accion;  /** Volcamos los distintos parametros de la linea a las variables */
            if (accion == "escribir") ss >> valor; 
     }
-    file.close();
+    file.close();               /** Cerramos el fichero de texto*/
 }
 
