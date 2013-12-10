@@ -1,0 +1,19 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Nodo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_nodo.html"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Actuador",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_actuador.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ActuadorAnalogico",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_actuador_analogico.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ActuadorDiscreto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_actuador_discreto.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Sensor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sensor.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="SensorAnalogico",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sensor_analogico.html"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="SensorDiscreto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sensor_discreto.html"];
+}

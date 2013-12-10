@@ -4,7 +4,9 @@
 #include <sensoranalogico.h>
 #include <actuadoranalogico.h>
 #include <vector>
+#include <iostream>
 
+using namespace std;
 class Regulador
 {
 public:

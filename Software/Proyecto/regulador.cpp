@@ -32,4 +32,6 @@ void Regulador::Actualizar()
     //set actuator value
     if (controlAction < 0)  controlAction = 0;/** Si el error es negativo */
     _vActuadores_ptr->at(_index).setValor(controlAction);
+    cout << "Actuador abierto un :"  << _vActuadores_ptr->at(_index).getValor()<< " %" <<endl;
+
 }

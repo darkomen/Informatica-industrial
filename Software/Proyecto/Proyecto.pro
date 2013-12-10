@@ -11,7 +11,8 @@ SOURCES += \
     actuadoranalogico.cpp \
     sensoranalogico.cpp \
     sensordiscreto.cpp \
-    regulador.cpp
+    regulador.cpp \
+    simulador.cpp
 
 HEADERS += \
     comunicaciones.h \
@@ -25,4 +26,5 @@ HEADERS += \
     actuadoranalogico.h \
     sensoranalogico.h \
     sensordiscreto.h \
-    regulador.h
+    regulador.h \
+    simulador.h
