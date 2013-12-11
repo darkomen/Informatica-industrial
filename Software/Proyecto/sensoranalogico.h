@@ -8,11 +8,11 @@ public:
     /** Constructor por defecto del objeto*/
     SensorAnalogico();
     float getValor(); /** Mostramos el estado del actuador */
-    void setValor(float valor);  /** Ponemos el estado del actuador */
+    void setValor(int valor);  /** Ponemos el estado del actuador */
     /** Destructor del objeto */
     ~SensorAnalogico();
 protected:
-    float _valor; /** Variable de tipo float donde se almacena el estado del actuador*/
+    int _valor; /** Variable de tipo float donde se almacena el estado del actuador*/
 };
 
 #endif // SENSORANALOGICO_H

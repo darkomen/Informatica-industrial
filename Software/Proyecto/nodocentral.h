@@ -4,18 +4,20 @@
 #include <actuadoranalogico.h>
 #include <sensoranalogico.h>
 #include <regulador.h>
-#include <vector>
 
+#include <vector>
+#include <fstream>
 #include <iostream>
+
 using namespace std;
 
 class NodoCentral
 {
 public:
-    //void addNodo(const ActuadorAnalogico actAnalog);
     void addActAnalog();    /** Añadimos un actuador analogico*/
     void addSensor();       /** Añadimos un sensor */
     void addRegulador(int index,double setpoint,float p); /** Añadimos un regulador*/
+    void configuracion(); /** Configuramos ficheros del sistema*/
 public:
     vector<ActuadorAnalogico> _actAnalog; /** Vector con los actuadores analogicos de la casa*/
     vector<SensorAnalogico> _sensAnalog;  /** Vector con los sensores analogicos de la casa */

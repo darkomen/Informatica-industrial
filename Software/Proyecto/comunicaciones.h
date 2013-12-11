@@ -3,6 +3,9 @@
 //includes
 #include <string>
 #include <sstream>
+#include <vector>
+#include <fstream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -24,6 +27,7 @@ public:
     */
     void createMessage(int id,int id1,string accion,float valor); /** Creamos el mensaje de comunicaciones*/
     int mostrarId(); /** Muestra el ID del nodo comunicaciones */
+    int generarId(); /** Generamos el ID del nodo */
 protected:
     /**
     Atributos */
