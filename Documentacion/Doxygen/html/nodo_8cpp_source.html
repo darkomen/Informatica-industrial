@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Proyecto Domotica: /home/darkomen/Desktop/Proyecto/nodo.cpp Source File</title>
+<title>Proyecto final Informática I: /home/darkomen/Informatica-industrial/Software/Proyecto/nodo.cpp Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,10 +32,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Proyecto Domotica
+   <div id="projectname">Proyecto final Informática I
    
    </div>
-   <div id="projectbrief">Proyecto final de informatica industrial I</div>
+   
   </td>
   
   
@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/darkomen/Desktop/Proyecto/nodo.cpp</div>  </div>
+<div class="title">/home/darkomen/Informatica-industrial/Software/Proyecto/nodo.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="nodo_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="nodo_8h.html">nodo.h</a>&quot;</span>
@@ -102,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00003"></a>00003 <span class="keyword">using namespace </span>std;
 <a name="l00004"></a><a class="code" href="class_nodo.html#ac30bd1bed827ef8784fd3cebd032e9a4">00004</a> <a class="code" href="class_nodo.html#ac30bd1bed827ef8784fd3cebd032e9a4">Nodo::Nodo</a>()
 <a name="l00005"></a>00005 {
-<a name="l00007"></a>00007     _id = <a class="code" href="funciones_8cpp.html#a3bb9fabd351679185fda6a1c90ce2616">generar_id</a>();
+<a name="l00007"></a>00007     _id = generarId();
 <a name="l00008"></a>00008     <span class="comment">//_comunicacion = Ficheros;</span>
 <a name="l00009"></a>00009 }
 <a name="l00010"></a><a class="code" href="class_nodo.html#a8a1dd01c95ff7bcb1182318498e834f9">00010</a> <a class="code" href="class_nodo.html#a8a1dd01c95ff7bcb1182318498e834f9">Nodo::~Nodo</a>()
@@ -116,7 +116,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00018"></a>00018 {
 <a name="l00020"></a>00020     <span class="keywordflow">return</span> this-&gt;_id;
 <a name="l00021"></a>00021 }
-<a name="l00022"></a>00022 
+<a name="l00022"></a><a class="code" href="class_nodo.html#a34c09e2efc1e1122109526ae0bbe606f">00022</a> <span class="keywordtype">int</span> <a class="code" href="class_nodo.html#a34c09e2efc1e1122109526ae0bbe606f">Nodo::generarId</a>(){
+<a name="l00031"></a>00031     vector&lt;int&gt; v; 
+<a name="l00032"></a>00032     <span class="keywordtype">int</span> id;        
+<a name="l00035"></a>00035     {
+<a name="l00036"></a>00036     ifstream file(<span class="stringliteral">&quot;./config/sistema/id.txt&quot;</span>);
+<a name="l00037"></a>00037     <span class="keywordtype">string</span> line;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039     <span class="keywordflow">while</span>(getline(file, line)) 
+<a name="l00040"></a>00040     {
+<a name="l00041"></a>00041         stringstream ss(line); 
+<a name="l00042"></a>00042         <span class="keywordtype">int</span> i;                 
+<a name="l00044"></a>00044         <span class="keywordflow">while</span>( ss &gt;&gt; i )       
+<a name="l00045"></a>00045            v.push_back(i);
+<a name="l00046"></a>00046     }
+<a name="l00047"></a>00047     file.close();               
+<a name="l00048"></a>00048     }
+<a name="l00049"></a>00049 
+<a name="l00051"></a>00051     srand(time(NULL));
+<a name="l00052"></a>00052     <span class="keywordtype">id</span>=1+rand()%(101-1);
+<a name="l00053"></a>00053 
+<a name="l00056"></a>00056     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;v.size();j++){
+<a name="l00057"></a>00057         <span class="keywordflow">if</span>(<span class="keywordtype">id</span>==v[j])
+<a name="l00058"></a>00058         {
+<a name="l00059"></a>00059             <span class="keywordtype">id</span>=1+rand()%(101-1);
+<a name="l00060"></a>00060             j=0;
+<a name="l00061"></a>00061         }
+<a name="l00062"></a>00062     }
+<a name="l00063"></a>00063 
+<a name="l00065"></a>00065     {
+<a name="l00066"></a>00066     ofstream file(<span class="stringliteral">&quot;./config/sistema/id.txt&quot;</span>, ios::app);
+<a name="l00067"></a>00067     file &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; endl;
+<a name="l00068"></a>00068     file.close();
+<a name="l00069"></a>00069     }
+<a name="l00070"></a>00070 
+<a name="l00072"></a>00072     <span class="keywordflow">return</span> id;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 }
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -137,7 +173,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="nodo_8cpp.html">nodo.cpp</a>      </li>
 
-    <li class="footer">Generated on Tue Dec 10 2013 10:55:34 for Proyecto Domotica by
+    <li class="footer">Generated on Thu Dec 12 2013 10:16:08 for Proyecto final Informática I by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

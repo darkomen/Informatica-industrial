@@ -9,5 +9,4 @@ Sensor::Sensor() : Nodo()
 Sensor::~Sensor()
 {
     //cout << "Destructor de la clase Sensor" << endl;
-
 }

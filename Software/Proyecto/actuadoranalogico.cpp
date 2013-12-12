@@ -20,5 +20,7 @@ float ActuadorAnalogico::getValor()
 void ActuadorAnalogico::setValor(float valor)
 {
     /** Método setvalor() Establecemos el valor del actuador */
+    if (valor >= 100) valor = 100;
+    if (valor <= 0) valor = 0;
     this->_valor = valor;
 }

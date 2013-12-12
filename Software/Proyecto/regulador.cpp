@@ -28,7 +28,6 @@ void Regulador::Actualizar()
       si el error es negativoes por que hemos superado el setpoin. */
     controlAction = _vActuadores_ptr->at(_index).getValor() + (error*_p);
 
-
     //set actuator value
     if (controlAction < 0)  controlAction = 0;/** Si el error es negativo */
     _vActuadores_ptr->at(_index).setValor(controlAction);

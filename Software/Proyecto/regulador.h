@@ -1,6 +1,6 @@
 #ifndef REGULADOR_H
 #define REGULADOR_H
-
+/** Código basado en el propuesto por el tutor del proyecto Javier Gonzalez-Quijano*/
 #include <sensoranalogico.h>
 #include <actuadoranalogico.h>
 #include <vector>

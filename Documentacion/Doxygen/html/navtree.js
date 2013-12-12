@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "Proyecto Domotica", "index.html", [
+  [ "Proyecto final Informática I", "index.html", [
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],

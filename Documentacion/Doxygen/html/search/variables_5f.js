@@ -10,6 +10,6 @@ var searchData=
   ['_5fsensanalog',['_sensAnalog',['../class_nodo_central.html#aa0167a550315d7030920c2a9a76908fc',1,'NodoCentral']]],
   ['_5fsetpoint',['_setpoint',['../class_regulador.html#a68ccc6b60b381b88a0ba0c3cff3e74a7',1,'Regulador']]],
   ['_5fvactuadores_5fptr',['_vActuadores_ptr',['../class_regulador.html#a35582357da64a5d440d77075edfec0f5',1,'Regulador']]],
-  ['_5fvalor',['_valor',['../class_actuador_analogico.html#a85cfcc61488995fb024f84cbe2d13f17',1,'ActuadorAnalogico::_valor()'],['../class_actuador_discreto.html#abad0dad83afeef998eafb7f61b018726',1,'ActuadorDiscreto::_valor()'],['../class_sensor_analogico.html#a4b46c92a4e01b78b4675f77f5ceef743',1,'SensorAnalogico::_valor()'],['../class_sensor_discreto.html#ab470c9567a78b4688fafe2d7fef2eff0',1,'SensorDiscreto::_valor()']]],
+  ['_5fvalor',['_valor',['../class_actuador_analogico.html#a85cfcc61488995fb024f84cbe2d13f17',1,'ActuadorAnalogico::_valor()'],['../class_actuador_discreto.html#abad0dad83afeef998eafb7f61b018726',1,'ActuadorDiscreto::_valor()'],['../class_sensor_analogico.html#ae90059343e0bdd5d33214a2a75cccdb5',1,'SensorAnalogico::_valor()'],['../class_sensor_discreto.html#ab470c9567a78b4688fafe2d7fef2eff0',1,'SensorDiscreto::_valor()']]],
   ['_5fvsensores_5fptr',['_vSensores_ptr',['../class_regulador.html#a340ca2d53ca2122c05fef6f38fe9fe7b',1,'Regulador']]]
 ];

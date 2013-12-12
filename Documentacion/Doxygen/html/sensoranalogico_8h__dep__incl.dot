@@ -2,23 +2,24 @@ digraph G
 {
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="Software/Proyecto/sensoranalogico.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 [label="/home/darkomen/Informatica-industrial/Software/Proyecto/sensoranalogico.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="Software/Proyecto/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+  Node2 [label="/home/darkomen/Informatica-industrial/Software/Proyecto/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Software/Proyecto/nodocentral.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nodocentral_8h.html"];
+  Node3 [label="/home/darkomen/Informatica-industrial/Software/Proyecto/nodocentral.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nodocentral_8h.html"];
   Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="Software/Proyecto/nodocentral.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nodocentral_8cpp.html"];
+  Node4 [label="/home/darkomen/Informatica-industrial/Software/Proyecto/nodocentral.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nodocentral_8cpp.html"];
   Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="Software/Proyecto/simulador.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simulador_8h.html"];
+  Node5 [label="/home/darkomen/Informatica-industrial/Software/Proyecto/simulador.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simulador_8h.html"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="Software/Proyecto/simulador.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simulador_8cpp.html"];
+  Node6 [label="/home/darkomen/Informatica-industrial/Software/Proyecto/simulador.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$simulador_8cpp.html"];
   Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="Software/Proyecto/regulador.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regulador_8h.html"];
+  Node7 [label="/home/darkomen/Informatica-industrial/Software/Proyecto/regulador.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regulador_8h.html"];
   Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="Software/Proyecto/regulador.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regulador_8cpp.html"];
+  Node8 [label="/home/darkomen/Informatica-industrial/Software/Proyecto/regulador.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regulador_8cpp.html"];
   Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node9 [label="Software/Proyecto/sensoranalogico.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sensoranalogico_8cpp.html"];
+  Node9 [label="/home/darkomen/Informatica-industrial/Software/Proyecto/sensoranalogico.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sensoranalogico_8cpp.html"];
 }

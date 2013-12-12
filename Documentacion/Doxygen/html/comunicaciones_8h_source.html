@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Proyecto Domotica: /home/darkomen/Desktop/Proyecto/comunicaciones.h Source File</title>
+<title>Proyecto final Informática I: /home/darkomen/Informatica-industrial/Software/Proyecto/comunicaciones.h Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,10 +32,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Proyecto Domotica
+   <div id="projectname">Proyecto final Informática I
    
    </div>
-   <div id="projectbrief">Proyecto final de informatica industrial I</div>
+   
   </td>
   
   
@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/darkomen/Desktop/Proyecto/comunicaciones.h</div>  </div>
+<div class="title">/home/darkomen/Informatica-industrial/Software/Proyecto/comunicaciones.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="comunicaciones_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef Comunicaciones_H</span>
@@ -102,24 +102,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="comment">//includes</span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00005"></a>00005 <span class="preprocessor">#include &lt;sstream&gt;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="keyword">using namespace </span>std;
-<a name="l00008"></a>00008 
-<a name="l00009"></a><a class="code" href="class_comunicaciones.html">00009</a> <span class="keyword">class </span><a class="code" href="class_comunicaciones.html">Comunicaciones</a>
-<a name="l00010"></a>00010     {
-<a name="l00011"></a>00011 <span class="keyword">public</span>:
-<a name="l00015"></a>00015     <a class="code" href="class_comunicaciones.html">Comunicaciones</a>();
-<a name="l00016"></a>00016 
-<a name="l00020"></a>00020     ~<a class="code" href="class_comunicaciones.html">Comunicaciones</a>();
-<a name="l00021"></a>00021 
-<a name="l00025"></a>00025     <span class="keywordtype">void</span> createMessage(<span class="keywordtype">int</span> <span class="keywordtype">id</span>,<span class="keywordtype">int</span> id1,<span class="keywordtype">string</span> accion,<span class="keywordtype">float</span> valor); 
-<a name="l00026"></a>00026     <span class="keywordtype">int</span> mostrarId(); 
-<a name="l00027"></a>00027 <span class="keyword">protected</span>:
-<a name="l00030"></a><a class="code" href="class_comunicaciones.html#a7459ee2a795d12edb137f21a8d0a13ed">00030</a>     <span class="keywordtype">int</span> <a class="code" href="class_comunicaciones.html#a7459ee2a795d12edb137f21a8d0a13ed">_id</a>; 
-<a name="l00031"></a><a class="code" href="class_comunicaciones.html#acea59ebbb13737348be648e9e8723812">00031</a>     stringstream *<a class="code" href="class_comunicaciones.html#acea59ebbb13737348be648e9e8723812">_mensaje</a>; 
-<a name="l00032"></a>00032 };
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="preprocessor">#endif // Comunicaciones_H</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="keyword">using namespace </span>std;
+<a name="l00011"></a>00011 
+<a name="l00012"></a><a class="code" href="class_comunicaciones.html">00012</a> <span class="keyword">class </span><a class="code" href="class_comunicaciones.html">Comunicaciones</a>
+<a name="l00013"></a>00013     {
+<a name="l00014"></a>00014 <span class="keyword">public</span>:
+<a name="l00018"></a>00018     <a class="code" href="class_comunicaciones.html">Comunicaciones</a>();
+<a name="l00019"></a>00019 
+<a name="l00023"></a>00023     ~<a class="code" href="class_comunicaciones.html">Comunicaciones</a>();
+<a name="l00024"></a>00024 
+<a name="l00028"></a>00028     <span class="keywordtype">void</span> createMessage(<span class="keywordtype">int</span> <span class="keywordtype">id</span>,<span class="keywordtype">int</span> id1,<span class="keywordtype">string</span> accion,<span class="keywordtype">float</span> valor); 
+<a name="l00029"></a>00029     <span class="keywordtype">int</span> mostrarId(); 
+<a name="l00030"></a>00030     <span class="keywordtype">int</span> generarId(); 
+<a name="l00031"></a>00031 <span class="keyword">protected</span>:
+<a name="l00034"></a><a class="code" href="class_comunicaciones.html#a7459ee2a795d12edb137f21a8d0a13ed">00034</a>     <span class="keywordtype">int</span> <a class="code" href="class_comunicaciones.html#a7459ee2a795d12edb137f21a8d0a13ed">_id</a>; 
+<a name="l00035"></a><a class="code" href="class_comunicaciones.html#acea59ebbb13737348be648e9e8723812">00035</a>     stringstream *<a class="code" href="class_comunicaciones.html#acea59ebbb13737348be648e9e8723812">_mensaje</a>; 
+<a name="l00036"></a>00036 };
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="preprocessor">#endif // Comunicaciones_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -140,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="comunicaciones_8h.html">comunicaciones.h</a>      </li>
 
-    <li class="footer">Generated on Tue Dec 10 2013 10:55:34 for Proyecto Domotica by
+    <li class="footer">Generated on Thu Dec 12 2013 10:16:08 for Proyecto final Informática I by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

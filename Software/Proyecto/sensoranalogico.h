@@ -4,7 +4,6 @@
 class SensorAnalogico :public Sensor
 {
 public:
-public:
     /** Constructor por defecto del objeto*/
     SensorAnalogico();
     float getValor(); /** Mostramos el estado del actuador */

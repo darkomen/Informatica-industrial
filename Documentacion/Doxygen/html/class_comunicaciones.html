@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Proyecto Domotica: Comunicaciones Class Reference</title>
+<title>Proyecto final Informática I: Comunicaciones Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,10 +32,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Proyecto Domotica
+   <div id="projectname">Proyecto final Informática I
    
    </div>
-   <div id="projectbrief">Proyecto final de informatica industrial I</div>
+   
   </td>
   
   
@@ -122,6 +122,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_comunicaciones.html#a58e2acc14733b38fc54199e0c3a89fa1">~Comunicaciones</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_comunicaciones.html#a0d968e5ad3bfd2a9ffb7472f01a2491a">createMessage</a> (int id, int id1, string accion, float valor)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_comunicaciones.html#a9e3f19a83900b19bad0c87726125db3f">mostrarId</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_comunicaciones.html#a6513c02a61f740f544d028d5f49708fa">generarId</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_comunicaciones.html#a7459ee2a795d12edb137f21a8d0a13ed">_id</a></td></tr>
@@ -129,7 +130,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="comunicaciones_8h_source.html#l00009">9</a> of file <a class="el" href="comunicaciones_8h_source.html">comunicaciones.h</a>.</p>
+<p>Definition at line <a class="el" href="comunicaciones_8h_source.html#l00012">12</a> of file <a class="el" href="comunicaciones_8h_source.html">comunicaciones.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae91bb15d37924076c24009e41f259707"></a><!-- doxytag: member="Comunicaciones::Comunicaciones" ref="ae91bb15d37924076c24009e41f259707" args="()" -->
 <div class="memitem">
@@ -147,7 +148,7 @@ Protected Attributes</h2></td></tr>
 <p>Constructor de la clase genera la Id de forma aleatorio y con un mensaje vacio </p>
 <p>Constructor por defecto de la clase comunicaciones Establecemos el Id de manera aleatorio y el mensaje como vacio </p>
 
-<p>Definition at line <a class="el" href="comunicaciones_8cpp_source.html#l00008">8</a> of file <a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a>.</p>
+<p>Definition at line <a class="el" href="comunicaciones_8cpp_source.html#l00007">7</a> of file <a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a>.</p>
 
 </div>
 </div>
@@ -167,7 +168,7 @@ Protected Attributes</h2></td></tr>
 <p>Destructor de la clase </p>
 <p>Destructor por defecto de la clase </p>
 
-<p>Definition at line <a class="el" href="comunicaciones_8cpp_source.html#l00016">16</a> of file <a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a>.</p>
+<p>Definition at line <a class="el" href="comunicaciones_8cpp_source.html#l00015">15</a> of file <a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a>.</p>
 
 </div>
 </div>
@@ -213,7 +214,45 @@ Protected Attributes</h2></td></tr>
 <p>Eliminamos el mensaje que tengamos</p>
 <p>Concatenamos los parámetros en el string </p>
 
-<p>Definition at line <a class="el" href="comunicaciones_8cpp_source.html#l00033">33</a> of file <a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a>.</p>
+<p>Definition at line <a class="el" href="comunicaciones_8cpp_source.html#l00084">84</a> of file <a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6513c02a61f740f544d028d5f49708fa"></a><!-- doxytag: member="Comunicaciones::generarId" ref="a6513c02a61f740f544d028d5f49708fa" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_comunicaciones.html#a6513c02a61f740f544d028d5f49708fa">Comunicaciones::generarId</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Muestra el ID del nodo comunicaciones </p>
+<p>Método generarID Generamos un ID de forma aleatoria y lo almacenamos en un fichero</p>
+<p>Genera los id de los nodos, comprueba si el ID ya está generado y lo introduce en un fichero. Bibliografia:</p>
+<ul>
+<li><a href="http://c.conclase.net/curso/?cap=039">http://c.conclase.net/curso/?cap=039</a></li>
+<li><a href="http://codigoc.org/354-obtener-numeros-aleatorios-en-c-rand-srand">http://codigoc.org/354-obtener-numeros-aleatorios-en-c-rand-srand</a></li>
+<li><a href="http://stackoverflow.com/questions/8116808/read-integers-from-a-text-file-with-c-ifstream/8116843#8116843">http://stackoverflow.com/questions/8116808/read-integers-from-a-text-file-with-c-ifstream/8116843#8116843</a></li>
+</ul>
+<p>Vector de tipo entero</p>
+<p>variable donde se almacena el ID generado</p>
+<p>Abrimos el fichero en modo lectura e introducimos todos los números en un vector</p>
+<p>Almacenamos la linea actual en la variable de tipo string line</p>
+<p>Instanciamos un objeto de tipo stringstream con el contenido de la linea</p>
+<p>de esta manera podemos pasar el string a un int</p>
+<p>Volcamos el valor de la linea ya pasada a INT al vector</p>
+<p>Cerramos el fichero</p>
+<p>Generamos el numero aleatorio del ID</p>
+<p>Lo comprobamos con todos los ID del fichero, si el número es igual que alguno, se vuelve a generar</p>
+<p>Guardamos el Id en el fichero de configuración.</p>
+<p>devolvemos el ID </p>
+
+<p>Definition at line <a class="el" href="comunicaciones_8cpp_source.html#l00031">31</a> of file <a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a>.</p>
 
 </div>
 </div>
@@ -234,7 +273,7 @@ Protected Attributes</h2></td></tr>
 <p>Métodos de la clase </p>
 <p>Métdodo mostrarID() Devuelve el ID del objeto </p>
 
-<p>Definition at line <a class="el" href="comunicaciones_8cpp_source.html#l00026">26</a> of file <a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a>.</p>
+<p>Definition at line <a class="el" href="comunicaciones_8cpp_source.html#l00025">25</a> of file <a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a>.</p>
 
 </div>
 </div>
@@ -249,9 +288,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Muestra el ID del nodo comunicaciones Atributos </p>
+<p>Generamos el ID del nodo Atributos </p>
 
-<p>Definition at line <a class="el" href="comunicaciones_8h_source.html#l00030">30</a> of file <a class="el" href="comunicaciones_8h_source.html">comunicaciones.h</a>.</p>
+<p>Definition at line <a class="el" href="comunicaciones_8h_source.html#l00034">34</a> of file <a class="el" href="comunicaciones_8h_source.html">comunicaciones.h</a>.</p>
 
 </div>
 </div>
@@ -267,13 +306,13 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Almacenamos el id del objeto </p>
 
-<p>Definition at line <a class="el" href="comunicaciones_8h_source.html#l00031">31</a> of file <a class="el" href="comunicaciones_8h_source.html">comunicaciones.h</a>.</p>
+<p>Definition at line <a class="el" href="comunicaciones_8h_source.html#l00035">35</a> of file <a class="el" href="comunicaciones_8h_source.html">comunicaciones.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/darkomen/Desktop/Proyecto/<a class="el" href="comunicaciones_8h_source.html">comunicaciones.h</a></li>
-<li>/home/darkomen/Desktop/Proyecto/<a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a></li>
+<li>/home/darkomen/Informatica-industrial/Software/Proyecto/<a class="el" href="comunicaciones_8h_source.html">comunicaciones.h</a></li>
+<li>/home/darkomen/Informatica-industrial/Software/Proyecto/<a class="el" href="comunicaciones_8cpp_source.html">comunicaciones.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div>
@@ -295,7 +334,7 @@ Protected Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_comunicaciones.html">Comunicaciones</a>      </li>
 
-    <li class="footer">Generated on Tue Dec 10 2013 10:55:34 for Proyecto Domotica by
+    <li class="footer">Generated on Thu Dec 12 2013 10:16:08 for Proyecto final Informática I by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

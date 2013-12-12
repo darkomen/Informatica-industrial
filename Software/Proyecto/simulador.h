@@ -1,5 +1,6 @@
 #ifndef SIMULADOR_H
 #define SIMULADOR_H
+/** Código basado en el propuesto por el tutor del proyecto Javier Gonzalez-Quijano*/
 #include "nodocentral.h"
 #include <stdlib.h>
 

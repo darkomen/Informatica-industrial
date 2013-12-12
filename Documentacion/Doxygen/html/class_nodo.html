@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Proyecto Domotica: Nodo Class Reference</title>
+<title>Proyecto final Informática I: Nodo Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,10 +32,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Proyecto Domotica
+   <div id="projectname">Proyecto final Informática I
    
    </div>
-   <div id="projectbrief">Proyecto final de informatica industrial I</div>
+   
   </td>
   
   
@@ -127,6 +127,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo.html#ac30bd1bed827ef8784fd3cebd032e9a4">Nodo</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo.html#a8a1dd01c95ff7bcb1182318498e834f9">~Nodo</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo.html#ad4a507bcb5e0ba569da950c9a55bc329">mostrarId</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo.html#a34c09e2efc1e1122109526ae0bbe606f">generarId</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ficheros.html">Ficheros</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo.html#a19d6d9c88212ca154ac317a6f1caffa0">_comunicacion</a></td></tr>
@@ -136,7 +137,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="nodo_8h_source.html#l00007">7</a> of file <a class="el" href="nodo_8h_source.html">nodo.h</a>.</p>
+<p>Definition at line <a class="el" href="nodo_8h_source.html#l00010">10</a> of file <a class="el" href="nodo_8h_source.html">nodo.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac30bd1bed827ef8784fd3cebd032e9a4"></a><!-- doxytag: member="Nodo::Nodo" ref="ac30bd1bed827ef8784fd3cebd032e9a4" args="()" -->
 <div class="memitem">
@@ -177,6 +178,44 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a34c09e2efc1e1122109526ae0bbe606f"></a><!-- doxytag: member="Nodo::generarId" ref="a34c09e2efc1e1122109526ae0bbe606f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_nodo.html#a34c09e2efc1e1122109526ae0bbe606f">Nodo::generarId</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostramos el ID del nodo </p>
+<p>Método generarID Generamos un ID de forma aleatoria y lo almacenamos en un fichero</p>
+<p>Genera los id de los nodos, comprueba si el ID ya está generado y lo introduce en un fichero. Bibliografia:</p>
+<ul>
+<li><a href="http://c.conclase.net/curso/?cap=039">http://c.conclase.net/curso/?cap=039</a></li>
+<li><a href="http://codigoc.org/354-obtener-numeros-aleatorios-en-c-rand-srand">http://codigoc.org/354-obtener-numeros-aleatorios-en-c-rand-srand</a></li>
+<li><a href="http://stackoverflow.com/questions/8116808/read-integers-from-a-text-file-with-c-ifstream/8116843#8116843">http://stackoverflow.com/questions/8116808/read-integers-from-a-text-file-with-c-ifstream/8116843#8116843</a></li>
+</ul>
+<p>Vector de tipo entero</p>
+<p>variable donde se almacena el ID generado</p>
+<p>Abrimos el fichero en modo lectura e introducimos todos los números en un vector</p>
+<p>Almacenamos la linea actual en la variable de tipo string line</p>
+<p>Instanciamos un objeto de tipo stringstream con el contenido de la linea</p>
+<p>de esta manera podemos pasar el string a un int</p>
+<p>Volcamos el valor de la linea ya pasada a INT al vector</p>
+<p>Cerramos el fichero</p>
+<p>Generamos el numero aleatorio del ID</p>
+<p>Lo comprobamos con todos los ID del fichero, si el número es igual que alguno, se vuelve a generar</p>
+<p>Guardamos el Id en el fichero de configuración.</p>
+<p>devolvemos el ID </p>
+
+<p>Definition at line <a class="el" href="nodo_8cpp_source.html#l00022">22</a> of file <a class="el" href="nodo_8cpp_source.html">nodo.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ad4a507bcb5e0ba569da950c9a55bc329"></a><!-- doxytag: member="Nodo::mostrarId" ref="ad4a507bcb5e0ba569da950c9a55bc329" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +248,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="nodo_8h_source.html#l00012">12</a> of file <a class="el" href="nodo_8h_source.html">nodo.h</a>.</p>
+<p>Definition at line <a class="el" href="nodo_8h_source.html#l00015">15</a> of file <a class="el" href="nodo_8h_source.html">nodo.h</a>.</p>
 
 </div>
 </div>
@@ -223,15 +262,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Mostramos el ID del nodo </p>
+<p>Generamos el ID del nodo </p>
 
-<p>Definition at line <a class="el" href="nodo_8h_source.html#l00016">16</a> of file <a class="el" href="nodo_8h_source.html">nodo.h</a>.</p>
+<p>Definition at line <a class="el" href="nodo_8h_source.html#l00019">19</a> of file <a class="el" href="nodo_8h_source.html">nodo.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/darkomen/Desktop/Proyecto/<a class="el" href="nodo_8h_source.html">nodo.h</a></li>
-<li>/home/darkomen/Desktop/Proyecto/<a class="el" href="nodo_8cpp_source.html">nodo.cpp</a></li>
+<li>/home/darkomen/Informatica-industrial/Software/Proyecto/<a class="el" href="nodo_8h_source.html">nodo.h</a></li>
+<li>/home/darkomen/Informatica-industrial/Software/Proyecto/<a class="el" href="nodo_8cpp_source.html">nodo.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div>
@@ -253,7 +292,7 @@ Protected Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_nodo.html">Nodo</a>      </li>
 
-    <li class="footer">Generated on Tue Dec 10 2013 10:55:34 for Proyecto Domotica by
+    <li class="footer">Generated on Thu Dec 12 2013 10:16:08 for Proyecto final Informática I by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

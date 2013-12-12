@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Proyecto Domotica: NodoCentral Class Reference</title>
+<title>Proyecto final Informática I: NodoCentral Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,10 +32,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Proyecto Domotica
+   <div id="projectname">Proyecto final Informática I
    
    </div>
-   <div id="projectbrief">Proyecto final de informatica industrial I</div>
+   
   </td>
   
   
@@ -112,6 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo_central.html#a605a6b6a044707845ff916d9de5d32bb">addActAnalog</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo_central.html#a3518df8bcfc23d18111181f37a5f7b03">addSensor</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo_central.html#aa94b74018d2a3d6821af2a53c04c9162">addRegulador</a> (int index, double setpoint, float p)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo_central.html#a6fdbfc9e319263803f06e9d45c88762e">configuracion</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_actuador_analogico.html">ActuadorAnalogico</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nodo_central.html#acaa008fd4180ac0107e9001bf79305f3">_actAnalog</a></td></tr>
@@ -120,7 +121,7 @@ Public Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="nodocentral_8h_source.html#l00012">12</a> of file <a class="el" href="nodocentral_8h_source.html">nodocentral.h</a>.</p>
+<p>Definition at line <a class="el" href="nodocentral_8h_source.html#l00014">14</a> of file <a class="el" href="nodocentral_8h_source.html">nodocentral.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a605a6b6a044707845ff916d9de5d32bb"></a><!-- doxytag: member="NodoCentral::addActAnalog" ref="a605a6b6a044707845ff916d9de5d32bb" args="()" -->
 <div class="memitem">
@@ -198,6 +199,29 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6fdbfc9e319263803f06e9d45c88762e"></a><!-- doxytag: member="NodoCentral::configuracion" ref="a6fdbfc9e319263803f06e9d45c88762e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_nodo_central.html#a6fdbfc9e319263803f06e9d45c88762e">NodoCentral::configuracion</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Añadimos un regulador </p>
+<p>Método <a class="el" href="class_nodo_central.html#a6fdbfc9e319263803f06e9d45c88762e">configuracion()</a> Creamos los ficheros necesarios por el sistema</p>
+<p>comprobamos si el fichero ./config está generado o no.</p>
+<p>Si el fichero existe, no me genera los ficheros del sistema, no es la primera vez que se ejecuta</p>
+<p>Si no está creado, es la primera vez que se ejecuta. </p>
+
+<p>Definition at line <a class="el" href="nodocentral_8cpp_source.html#l00021">21</a> of file <a class="el" href="nodocentral_8cpp_source.html">nodocentral.cpp</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="acaa008fd4180ac0107e9001bf79305f3"></a><!-- doxytag: member="NodoCentral::_actAnalog" ref="acaa008fd4180ac0107e9001bf79305f3" args="" -->
 <div class="memitem">
@@ -209,9 +233,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Añadimos un regulador </p>
+<p>Configuramos ficheros del sistema </p>
 
-<p>Definition at line <a class="el" href="nodocentral_8h_source.html#l00020">20</a> of file <a class="el" href="nodocentral_8h_source.html">nodocentral.h</a>.</p>
+<p>Definition at line <a class="el" href="nodocentral_8h_source.html#l00022">22</a> of file <a class="el" href="nodocentral_8h_source.html">nodocentral.h</a>.</p>
 
 </div>
 </div>
@@ -227,7 +251,7 @@ Public Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Vector con los sensores analogicos de la casa </p>
 
-<p>Definition at line <a class="el" href="nodocentral_8h_source.html#l00022">22</a> of file <a class="el" href="nodocentral_8h_source.html">nodocentral.h</a>.</p>
+<p>Definition at line <a class="el" href="nodocentral_8h_source.html#l00024">24</a> of file <a class="el" href="nodocentral_8h_source.html">nodocentral.h</a>.</p>
 
 </div>
 </div>
@@ -243,13 +267,13 @@ Public Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Vector con los actuadores analogicos de la casa </p>
 
-<p>Definition at line <a class="el" href="nodocentral_8h_source.html#l00021">21</a> of file <a class="el" href="nodocentral_8h_source.html">nodocentral.h</a>.</p>
+<p>Definition at line <a class="el" href="nodocentral_8h_source.html#l00023">23</a> of file <a class="el" href="nodocentral_8h_source.html">nodocentral.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/darkomen/Desktop/Proyecto/<a class="el" href="nodocentral_8h_source.html">nodocentral.h</a></li>
-<li>/home/darkomen/Desktop/Proyecto/<a class="el" href="nodocentral_8cpp_source.html">nodocentral.cpp</a></li>
+<li>/home/darkomen/Informatica-industrial/Software/Proyecto/<a class="el" href="nodocentral_8h_source.html">nodocentral.h</a></li>
+<li>/home/darkomen/Informatica-industrial/Software/Proyecto/<a class="el" href="nodocentral_8cpp_source.html">nodocentral.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div>
@@ -271,7 +295,7 @@ Public Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_nodo_central.html">NodoCentral</a>      </li>
 
-    <li class="footer">Generated on Tue Dec 10 2013 10:55:34 for Proyecto Domotica by
+    <li class="footer">Generated on Thu Dec 12 2013 10:16:08 for Proyecto final Informática I by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

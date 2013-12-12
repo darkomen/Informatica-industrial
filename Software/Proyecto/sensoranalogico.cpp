@@ -20,5 +20,7 @@ float SensorAnalogico::getValor()
 void SensorAnalogico::setValor(int valor)
 {
     /** Método setvalor() Establecemos el valor del sensor de manera aleatorio*/
+    if (valor >= 100) valor = 100;
+    if (valor <= 0) valor = 0;
     this->_valor = valor;
 }

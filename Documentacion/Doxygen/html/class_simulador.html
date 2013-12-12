@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Proyecto Domotica: Simulador Class Reference</title>
+<title>Proyecto final Informática I: Simulador Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,10 +32,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Proyecto Domotica
+   <div id="projectname">Proyecto final Informática I
    
    </div>
-   <div id="projectbrief">Proyecto final de informatica industrial I</div>
+   
   </td>
   
   
@@ -109,11 +109,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulador.html#aebd138be8fd25b82ab5f2c0835236c6c">Simulador</a> (<a class="el" href="class_nodo_central.html">NodoCentral</a> *ssc_ptr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulador.html#abd45ec93ae8fdd6d024d20c40c141f60">cambiarValorSensor</a> (int index, double valor)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulador.html#aab728ad157b9ca3cb2953990f2e60611">~Simulador</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulador.html#a5769ad9c14eb0bc5cc30a71dcd7cad96">cambiarValorSensor</a> (int index, int min, int max)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="simulador_8h_source.html#l00005">5</a> of file <a class="el" href="simulador_8h_source.html">simulador.h</a>.</p>
+<div class="textblock"><p>Código basado en el propuesto por el tutor del proyecto Javier Gonzalez-Quijano </p>
+
+<p>Definition at line <a class="el" href="simulador_8h_source.html#l00007">7</a> of file <a class="el" href="simulador_8h_source.html">simulador.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aebd138be8fd25b82ab5f2c0835236c6c"></a><!-- doxytag: member="Simulador::Simulador" ref="aebd138be8fd25b82ab5f2c0835236c6c" args="(NodoCentral *ssc_ptr)" -->
 <div class="memitem">
@@ -129,19 +131,38 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>COnstructor </p>
 <p>Creamos un puntero con el <a class="el" href="class_nodo_central.html">NodoCentral</a> </p>
 
 <p>Definition at line <a class="el" href="simulador_8cpp_source.html#l00003">3</a> of file <a class="el" href="simulador_8cpp_source.html">simulador.cpp</a>.</p>
 
 </div>
 </div>
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="abd45ec93ae8fdd6d024d20c40c141f60"></a><!-- doxytag: member="Simulador::cambiarValorSensor" ref="abd45ec93ae8fdd6d024d20c40c141f60" args="(int index, double valor)" -->
+<a class="anchor" id="aab728ad157b9ca3cb2953990f2e60611"></a><!-- doxytag: member="Simulador::~Simulador" ref="aab728ad157b9ca3cb2953990f2e60611" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_simulador.html#abd45ec93ae8fdd6d024d20c40c141f60">Simulador::cambiarValorSensor</a> </td>
+          <td class="memname"><a class="el" href="class_simulador.html#aab728ad157b9ca3cb2953990f2e60611">Simulador::~Simulador</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="simulador_8cpp_source.html#l00008">8</a> of file <a class="el" href="simulador_8cpp_source.html">simulador.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a5769ad9c14eb0bc5cc30a71dcd7cad96"></a><!-- doxytag: member="Simulador::cambiarValorSensor" ref="a5769ad9c14eb0bc5cc30a71dcd7cad96" args="(int index, int min, int max)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_simulador.html#a5769ad9c14eb0bc5cc30a71dcd7cad96">Simulador::cambiarValorSensor</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em>, </td>
@@ -149,8 +170,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>valor</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -160,15 +187,19 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Cambiamos el valor del sensor indicado </p>
+<p>Metodos </p>
+<p>Método cambiarvalorSensor() Modifica el valor del sensor que le indiquemos con un numero aleatorio dentro del intervalo introducido</p>
+<p>Generamos el numero aleatorio dentro del rango establecido</p>
+<p>Cambiamos el valor del sensor indicado</p>
+<p>Mostramos por pantalla el valor cambiado </p>
 
-<p>Definition at line <a class="el" href="simulador_8cpp_source.html#l00009">9</a> of file <a class="el" href="simulador_8cpp_source.html">simulador.cpp</a>.</p>
+<p>Definition at line <a class="el" href="simulador_8cpp_source.html#l00013">13</a> of file <a class="el" href="simulador_8cpp_source.html">simulador.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/darkomen/Desktop/Proyecto/<a class="el" href="simulador_8h_source.html">simulador.h</a></li>
-<li>/home/darkomen/Desktop/Proyecto/<a class="el" href="simulador_8cpp_source.html">simulador.cpp</a></li>
+<li>/home/darkomen/Informatica-industrial/Software/Proyecto/<a class="el" href="simulador_8h_source.html">simulador.h</a></li>
+<li>/home/darkomen/Informatica-industrial/Software/Proyecto/<a class="el" href="simulador_8cpp_source.html">simulador.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div>
@@ -190,7 +221,7 @@ Public Member Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_simulador.html">Simulador</a>      </li>
 
-    <li class="footer">Generated on Tue Dec 10 2013 10:55:34 for Proyecto Domotica by
+    <li class="footer">Generated on Thu Dec 12 2013 10:16:08 for Proyecto final Informática I by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

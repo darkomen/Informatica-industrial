@@ -8,5 +8,6 @@ var searchData=
   ['_7enodo',['~Nodo',['../class_nodo.html#a8a1dd01c95ff7bcb1182318498e834f9',1,'Nodo']]],
   ['_7esensor',['~Sensor',['../class_sensor.html#aee8c70e7ef05ce65e7ee33686b5d7db2',1,'Sensor']]],
   ['_7esensoranalogico',['~SensorAnalogico',['../class_sensor_analogico.html#a60209e26cddbff01bd88f05e248e3a96',1,'SensorAnalogico']]],
-  ['_7esensordiscreto',['~SensorDiscreto',['../class_sensor_discreto.html#a95c4cd1c19acc1999c48b49bcdb239dc',1,'SensorDiscreto']]]
+  ['_7esensordiscreto',['~SensorDiscreto',['../class_sensor_discreto.html#a95c4cd1c19acc1999c48b49bcdb239dc',1,'SensorDiscreto']]],
+  ['_7esimulador',['~Simulador',['../class_simulador.html#aab728ad157b9ca3cb2953990f2e60611',1,'Simulador']]]
 ];

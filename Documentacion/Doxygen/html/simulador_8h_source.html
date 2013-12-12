@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Proyecto Domotica: /home/darkomen/Desktop/Proyecto/simulador.h Source File</title>
+<title>Proyecto final Informática I: /home/darkomen/Informatica-industrial/Software/Proyecto/simulador.h Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,10 +32,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Proyecto Domotica
+   <div id="projectname">Proyecto final Informática I
    
    </div>
-   <div id="projectbrief">Proyecto final de informatica industrial I</div>
+   
   </td>
   
   
@@ -94,24 +94,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/darkomen/Desktop/Proyecto/simulador.h</div>  </div>
+<div class="title">/home/darkomen/Informatica-industrial/Software/Proyecto/simulador.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="simulador_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef SIMULADOR_H</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define SIMULADOR_H</span>
-<a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="nodocentral_8h.html">nodocentral.h</a>&quot;</span>
-<a name="l00004"></a>00004 
-<a name="l00005"></a><a class="code" href="class_simulador.html">00005</a> <span class="keyword">class </span><a class="code" href="class_simulador.html">Simulador</a>
-<a name="l00006"></a>00006 {
-<a name="l00007"></a>00007 <span class="keyword">public</span>:
-<a name="l00008"></a>00008     <a class="code" href="class_simulador.html#aebd138be8fd25b82ab5f2c0835236c6c">Simulador</a>(<a class="code" href="class_nodo_central.html">NodoCentral</a> * ssc_ptr);
-<a name="l00009"></a>00009     <span class="keywordtype">void</span> <a class="code" href="class_simulador.html#abd45ec93ae8fdd6d024d20c40c141f60">cambiarValorSensor</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">double</span> valor);
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="keyword">private</span>:
-<a name="l00012"></a>00012     <a class="code" href="class_nodo_central.html">NodoCentral</a> *_ssc_ptr;
-<a name="l00013"></a>00013 };
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="nodocentral_8h.html">nodocentral.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a><a class="code" href="class_simulador.html">00007</a> <span class="keyword">class </span><a class="code" href="class_simulador.html">Simulador</a>
+<a name="l00008"></a>00008 {
+<a name="l00009"></a>00009 <span class="keyword">public</span>:
+<a name="l00011"></a>00011     <a class="code" href="class_simulador.html#aebd138be8fd25b82ab5f2c0835236c6c">Simulador</a>(<a class="code" href="class_nodo_central.html">NodoCentral</a> * ssc_ptr);
+<a name="l00012"></a>00012     <a class="code" href="class_simulador.html#aab728ad157b9ca3cb2953990f2e60611">~Simulador</a>();    
+<a name="l00013"></a>00013     <span class="keywordtype">void</span> <a class="code" href="class_simulador.html#a5769ad9c14eb0bc5cc30a71dcd7cad96">cambiarValorSensor</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max);
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="preprocessor">#endif // SIMULADOR_H</span>
+<a name="l00015"></a>00015 <span class="keyword">private</span>:
+<a name="l00016"></a>00016     <a class="code" href="class_nodo_central.html">NodoCentral</a> *_ssc_ptr;
+<a name="l00017"></a>00017     <span class="keywordtype">int</span> _valorSim; 
+<a name="l00018"></a>00018 };
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 <span class="preprocessor">#endif // SIMULADOR_H</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -132,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="simulador_8h.html">simulador.h</a>      </li>
 
-    <li class="footer">Generated on Tue Dec 10 2013 10:55:34 for Proyecto Domotica by
+    <li class="footer">Generated on Thu Dec 12 2013 10:16:08 for Proyecto final Informática I by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
